@@ -97,7 +97,7 @@ input[type="password"]:focus {
 /* Buttons */
 button {
     padding: 12px 24px;
-    background-color: #bcf1e6; /* لون زر مميز */
+    background-color: #1abc9c; /* لون زر مميز */
     color: white;
     border: none;
     border-radius: 5px;
