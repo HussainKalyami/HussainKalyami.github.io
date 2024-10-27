@@ -13,7 +13,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: #fff; /* تغيير اللون إلى أبيض لتسهيل القراءة على الخلفية */
+    color: #ffffff;
     position: relative;
 }
 
@@ -24,7 +24,8 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.7); /* زيادة تعتيم الخلفية لتكون النصوص أكثر وضوحًا */
+    background: rgba(0, 0, 0, 0.5); /* خلفية داكنة لتوفير تباين أفضل */
+    backdrop-filter: blur(7px);
     z-index: 1;
 }
 
@@ -49,7 +50,7 @@ header {
 .page {
     display: none;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.9); /* تحسين خلفية الصفحات لتكون أكثر وضوحًا */
+    background-color: rgba(76, 175, 80, 0.9); /* خلفية خضراء مريحة */
     padding: 40px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
     border-radius: 15px;
@@ -81,7 +82,7 @@ input[type="password"] {
     width: 100%;
     padding: 12px;
     margin: 10px 0;
-    border: 2px solid #4ca1a3; /* استخدام لون مميز للحدود */
+    border: 2px solid #4ca1a3; /* لون هادئ للحدود */
     border-radius: 8px;
     font-size: 1em;
     transition: border-color 0.3s, box-shadow 0.3s;
@@ -90,14 +91,14 @@ input[type="password"] {
 
 input[type="email"]:focus,
 input[type="password"]:focus {
-    border-color: #1abc9c; /* تغيير اللون عند التركيز */
+    border-color: #1abc9c; /* تحسين لون التركيز */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Buttons */
 button {
     padding: 12px 24px;
-    background-color: #1abc9c; /* لون زر مميز */
+    background-color: #007bff; /* لون أزرق هادئ */
     color: white;
     border: none;
     border-radius: 5px;
@@ -111,11 +112,11 @@ button {
 }
 
 button i {
-    margin-left: 8px; /* إضافة مسافة بين النص والأيقونة */
+    margin-left: 8px;
 }
 
 button:hover {
-    background-color: #16a085; /* تغيير لون الزر عند التمرير */
+    background-color: #0056b3; /* لون أغمق عند التمرير */
     transform: scale(1.05);
 }
 
@@ -131,4 +132,19 @@ button:hover {
     0%, 100% { transform: translateX(0); }
     25% { transform: translateX(-5px); }
     75% { transform: translateX(5px); }
+}
+
+/* Adding media queries for responsiveness */
+@media (max-width: 600px) {
+    .page {
+        padding: 20px;
+    }
+
+    button {
+        padding: 10px 20px;
+    }
+
+    h2 {
+        font-size: 1.5em; /* تحسين حجم الخط للعناوين في الشاشات الصغيرة */
+    }
 }
